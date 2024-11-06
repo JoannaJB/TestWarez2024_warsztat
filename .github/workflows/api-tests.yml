@@ -37,6 +37,6 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: my-artifact
-        path: /reports
+        path: Projects/TestWarez2024_warsztat/mochawesome-report
     - name: Display structure of downloaded files
-      run: ls -R /reports
+      run: ls -R Projects/TestWarez2024_warsztat/mochawesome-report
