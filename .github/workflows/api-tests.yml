@@ -39,4 +39,4 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: mochawesome-report
-        path: Projects/TestWarez2024_warsztat/mochawesome-report/
+        path: /home/runner/work/TestWarez2024_warsztat/TestWarez2024_warsztat/mochawesome-report/mochawesome.json
