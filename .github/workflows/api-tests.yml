@@ -6,6 +6,8 @@ env:
   SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
 
 on:
+  schedule:
+    - cron: '0 12,14,17 * * 1-5'
   push:
     branches: [ "main" ]
   pull_request:
