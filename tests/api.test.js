@@ -58,15 +58,12 @@ describe("Api tests", () => {
     .withBearerToken(token_response);
     expect(response.statusCode).to.eql(200)
   });
+
+  it.only("Delete book", async () => {
+    const response = await spec()
+      .delete(`${baseUrl}/BookStore/v1/Books?UserId=${userId}`)
+      .withBearerToken(token_response)
+      .inspect()
+    expect(response.statusCode).to.eql(204);
+  });
 });
-//   it.only("Delete book", async () => {
-//     const response = await spec()
-//       .delete(`${baseUrl}/BookStore/v1/Book`)
-//       .withBearerToken(token_response)
-//       .withBody({
-//         isbn: "9781449331818",
-//         userId: userId,
-//       })
-//       .inspect();
-//     expect(response.statusCode).to.eql(204);
-//   });
